@@ -52,7 +52,6 @@ function App() {
                 <iframe
                     srcDoc={srcDoc}
                     title="output"
-                    // allow to only run scripts
                     sandbox="allow-scripts"
                     frameBorder="0"
                     width="100%"

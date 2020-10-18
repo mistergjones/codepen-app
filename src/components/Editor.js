@@ -25,15 +25,12 @@ function Editor(props) {
     }
 
     return (
-        // use string interpellation with a function to set an additional CSS Class to be applied if we need to collapse it. i.e. we are adding a class below...we just need to apply the CSS if appropriate
         <div className={`editor-container ${open ? "" : "collapsed"}`}>
             <div className="editor-title">
                 {displayName}
                 <button
                     type="button"
                     className="expand-collapse-btn"
-                    // now toggle if we need to collapse one of the editors or not.
-                    // we run a function that toggles the state
                     onClick={() => setOpen((prevOpen) => !prevOpen)}
                 >
                     <FontAwesomeIcon
