@@ -11,16 +11,16 @@ export default function useLocalStorage(key, initialValue) {
 
         // if we have a value, return the jsonValue as an object.
         if (jsonValue != null) {
-            console.log(`Json parse value is: `, JSON.parse(jsonValue));
+            //console.log(`Json parse value is: `, JSON.parse(jsonValue));
             return JSON.parse(jsonValue);
         }
 
         // if we don't have one in local storage, we use the initial value of the function version of use state
         if (typeof initialValue === "function") {
-            console.log(`initialValue function is `, initialValue());
+            //console.log(`initialValue function is `, initialValue());
             return initialValue();
         } else {
-            console.log(`plain initialValue is`, initialValue);
+            //console.log(`plain initialValue is`, initialValue);
             return initialValue;
         }
     });
